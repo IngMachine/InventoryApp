@@ -46,7 +46,9 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         try {
                             JSONObject jsonResponse = new JSONObject(response);
+                            System.out.println(jsonResponse);
                             boolean sucess = jsonResponse.getBoolean("success");
+                            System.out.println(jsonResponse);
                             if (sucess){
                                 String name = jsonResponse.getString("name");
                                 int age = jsonResponse.getInt("age");
