@@ -1,15 +1,23 @@
 package com.example.fredy.inventoryapp;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Usuario extends AppCompatActivity {
     TextView tvNombre,tvUsuario,tvEdad,tvPassword,tvEmail;
+    Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
         setContentView(R.layout.activity_usuario);
         tvNombre = findViewById(R.id.TextV_nombre);
         tvUsuario = findViewById(R.id.TextV_usuario);
@@ -28,6 +36,17 @@ public class Usuario extends AppCompatActivity {
         tvPassword.setText(password);
         tvEdad.setText(age+"");
         tvEmail.setText(email);
+
+        btn = (Button)findViewById(R.id.buttoningre);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent btn = new Intent(Usuario.this, Lista.class);
+                startActivity(btn);
+            }
+        });
+
+
 
     }
 }
