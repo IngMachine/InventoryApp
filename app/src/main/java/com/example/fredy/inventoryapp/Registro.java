@@ -1,10 +1,12 @@
 package com.example.fredy.inventoryapp;
 
 import android.content.Intent;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +21,8 @@ import org.json.JSONObject;
 
 public class Registro extends AppCompatActivity implements View.OnClickListener {
     EditText etnombre,etusuario,etpassword,etedad,etemail;
+    TextInputLayout impEmail;
+    boolean Cor=false,pas=false;
     Button btn_registrar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         etpassword = findViewById(R.id.EditT_password);
         etedad = findViewById(R.id.EditT_edad);
         etemail = findViewById(R.id.EditT_email);
+        impEmail = findViewById(R.id.impEmail);
 
         btn_registrar = findViewById(R.id.Btn_registrar);
 
@@ -45,6 +50,14 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         final String username = etusuario.getText().toString();
         final String password = etpassword.getText().toString();
         final int age = Integer.parseInt(etedad.getText().toString());
+        if (!Patterns.EMAIL_ADDRESS.matcher(etemail.getText().toString()).matches()){
+            impEmail.setError("Correo Invalido");
+            Cor=false;
+        }else {
+            Cor = true;
+            impEmail.setError(null);
+        }
+
         final String email = etemail.getText().toString();
 
         Response.Listener<String> respoListener = new Response.Listener<String>() {
@@ -53,7 +66,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                 try {
                     JSONObject jsonResponse = new JSONObject(response);
                     boolean sucess = jsonResponse.getBoolean("succes");
-                    if (sucess){
+                    if (sucess && Cor){
                         Intent intent = new Intent(Registro.this,MainActivity.class);
                         Registro.this.startActivity(intent);
                     }else{
@@ -68,9 +81,12 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
             }
         };
 
-    RegisterRequest registerRequest = new RegisterRequest(name,username,age,password,email,respoListener);
-        RequestQueue queue = Volley.newRequestQueue(Registro.this);
-        queue.add(registerRequest);
+        if (Cor){
+            RegisterRequest registerRequest = new RegisterRequest(name,username,age,password,email,respoListener);
+            RequestQueue queue = Volley.newRequestQueue(Registro.this);
+            queue.add(registerRequest);
+        }
+
 
     }
 }
