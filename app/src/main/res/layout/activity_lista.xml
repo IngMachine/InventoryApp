@@ -11,48 +11,71 @@
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="50dp"
-        android:layout_marginLeft="30dp">
+        android:paddingTop="50dp">
 
         <ImageButton
             android:id="@+id/herra"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
             android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="100dp"
             android:background="#e0e855"
             android:src="@drawable/tools" />
 
 
         <ImageButton
             android:id="@+id/epp"
-            android:background="#e0e855"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
             android:layout_marginLeft="90dp"
-            android:src="@drawable/helmet"/>
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="100dp"
+            android:background="#e0e855"
+            android:src="@drawable/helmet" />
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <ImageButton
             android:id="@+id/dotacion"
-        android:background="#e0e855"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="150dp"
-            android:src="@drawable/overol"/>
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="41dp"
+            android:background="#e0e855"
+            android:src="@drawable/overol" />
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/enviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="64dp"
+            android:text="@string/enviar" />
+
+        <TextView
+            android:id="@+id/tvprueba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text=""
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
 
 
     </LinearLayout>

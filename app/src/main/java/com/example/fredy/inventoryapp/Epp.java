@@ -9,7 +9,8 @@ import android.widget.Spinner;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Epp extends AppCompatActivity {
+public class
+Epp extends AppCompatActivity {
 
     Spinner spiner, spiner1,spiner2,spiner3,spiner4,spiner5,spiner6;
     @Override

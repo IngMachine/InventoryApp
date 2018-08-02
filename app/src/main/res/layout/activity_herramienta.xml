@@ -28,13 +28,14 @@
                 android:layout_marginTop="15dp"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/llave" />
+                android:src="@drawable/llave"
+                android:contentDescription="TODO" />
 
 
             <Spinner
                 android:id="@+id/spinnerll"
                 android:layout_marginTop="40dp"
-                android:layout_width="50dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_weight="1" />
@@ -58,120 +59,6 @@
                     android:id="@+id/spinnermarti"
                     android:layout_width="50dp"
                     android:layout_marginTop="20dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_weight="1" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/destornillador"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/screwdriver" />
-
-
-                <Spinner
-                    android:id="@+id/spinnerd"
-                    android:layout_width="50dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_weight="1" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/pinzas"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/pliers" />
-
-
-                <Spinner
-                    android:id="@+id/spinnerp"
-                    android:layout_width="50dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_weight="1" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/metro"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/metro" />
-
-
-                <Spinner
-                    android:id="@+id/spinnerme"
-                    android:layout_width="50dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_weight="1" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/escalera"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/escalera" />
-
-
-                <Spinner
-                    android:id="@+id/spinneres"
-                    android:layout_width="50dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_weight="1" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/taladro"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/taladro" />
-
-
-                <Spinner
-                    android:id="@+id/spinnerta"
-                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_weight="1" />

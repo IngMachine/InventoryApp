@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.fredy.inventoryapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -18,16 +19,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Registro"
-            android:parentActivityName=".Usuario"/>
+        <activity
+            android:name=".Registro"
+            android:parentActivityName=".Usuario"
+            tools:targetApi="jelly_bean" />
         <activity android:name=".Usuario" />
         <activity android:name=".Lista" />
-        <activity android:name=".Herramienta"
-            android:parentActivityName=".Lista"/>
-        <activity android:name=".Epp"
-            android:parentActivityName=".Lista"/>
-        <activity android:name=".Dotacion"
-            android:parentActivityName=".Lista"/>
+        <activity
+            android:name=".Herramienta"
+            android:parentActivityName=".Lista"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".Epp"
+            android:parentActivityName=".Lista"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".Dotacion"
+            android:parentActivityName=".Lista"
+            tools:targetApi="jelly_bean" />
+        <activity android:name=".View_final"></activity>
     </application>
 
 </manifest>

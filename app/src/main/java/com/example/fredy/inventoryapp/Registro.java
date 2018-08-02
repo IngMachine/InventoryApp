@@ -19,10 +19,12 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.regex.Pattern;
+
 public class Registro extends AppCompatActivity implements View.OnClickListener {
     EditText etnombre,etusuario,etpassword,etedad,etemail;
-    TextInputLayout impEmail;
-    boolean Cor=false,pas=false;
+    TextInputLayout impEmail,impNombre;
+    boolean Cor=false,pas=false,Nor=false;
     Button btn_registrar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         etpassword = findViewById(R.id.EditT_password);
         etedad = findViewById(R.id.EditT_edad);
         etemail = findViewById(R.id.EditT_email);
+        impNombre = findViewById(R.id.impNombre);
         impEmail = findViewById(R.id.impEmail);
 
         btn_registrar = findViewById(R.id.Btn_registrar);
@@ -47,6 +50,14 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
     @Override
     public void onClick(View view) {
         final String name = etnombre.getText().toString();
+        Pattern nombre = Pattern.compile(getString(R.string.expresion));
+        if (!nombre.matcher(name).matches()){
+            impNombre.setError("Nombre Invalido");
+            Nor = false;
+        }else {
+            Nor = true;
+            impNombre.setError(null);
+        }
         final String username = etusuario.getText().toString();
         final String password = etpassword.getText().toString();
         final int age = Integer.parseInt(etedad.getText().toString());
@@ -66,7 +77,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                 try {
                     JSONObject jsonResponse = new JSONObject(response);
                     boolean sucess = jsonResponse.getBoolean("succes");
-                    if (sucess && Cor){
+                    if (sucess && Cor && Nor){
                         Intent intent = new Intent(Registro.this,MainActivity.class);
                         Registro.this.startActivity(intent);
                     }else{
@@ -81,7 +92,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
             }
         };
 
-        if (Cor){
+        if (Cor && Nor){
             RegisterRequest registerRequest = new RegisterRequest(name,username,age,password,email,respoListener);
             RequestQueue queue = Volley.newRequestQueue(Registro.this);
             queue.add(registerRequest);

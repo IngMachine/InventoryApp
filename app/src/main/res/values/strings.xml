@@ -9,4 +9,11 @@
     <string name="email">Email</string>
     <string name="edad">Edad</string>
     <string name="nombre_p">Nombre:</string>
+    <string name="expresion">[ A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙ.-]+</string>
+    <string name="enviar">Enviar</string>
+    <string name="title_activity_view_final">view_final</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.fredy.inventoryapp;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 public class Usuario extends AppCompatActivity {
     TextView tvNombre,tvUsuario,tvEdad,tvPassword,tvEmail;
     Button btn;
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +39,7 @@ public class Usuario extends AppCompatActivity {
         tvEdad.setText(age+"");
         tvEmail.setText(email);
 
-        btn = (Button)findViewById(R.id.buttoningre);
+        btn = findViewById(R.id.buttoningre);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

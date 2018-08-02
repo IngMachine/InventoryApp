@@ -1,15 +1,21 @@
 package com.example.fredy.inventoryapp;
 
+import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Dotacion extends AppCompatActivity {
+    Button guardar;
 
     Spinner spinnner,spinnner1,spinnner2,spinnner3,spinnner4,spinnner5,spinnner6;
 
@@ -29,6 +35,7 @@ public class Dotacion extends AppCompatActivity {
         spinnner4=findViewById(R.id.spinnerglo);
         spinnner5=findViewById(R.id.spinnerehel);
         spinnner6=findViewById(R.id.spinnerpro);
+        guardar = findViewById(R.id.guardardo);
 
 
         List list = new ArrayList();
@@ -45,7 +52,7 @@ public class Dotacion extends AppCompatActivity {
         list.add("9");
         list.add("10");
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,list);
+        final ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,list);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinnner.setAdapter(arrayAdapter);
         spinnner1.setAdapter(arrayAdapter);
@@ -55,6 +62,14 @@ public class Dotacion extends AppCompatActivity {
         spinnner5.setAdapter(arrayAdapter);
         spinnner6.setAdapter(arrayAdapter);
 
-
-    }
+        guardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Dotacion.this,Lista.class);
+                int camisa = Integer.parseInt(spinnner.getSelectedItem().toString());
+                intent.putExtra("camis", camisa);
+                Dotacion.this.startActivity(intent);
+            }
+        });
+        }
 }

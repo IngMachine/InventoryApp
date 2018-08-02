@@ -45,7 +45,10 @@
                 android:layout_marginLeft="250dp"
                 android:layout_marginTop="50dp"
                 android:src="@drawable/overol"/>
+
+
         </LinearLayout>
+
 
 
     </ScrollView>

@@ -1,17 +1,22 @@
 package com.example.fredy.inventoryapp;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Herramienta extends AppCompatActivity {
-
-
+    Button guardar;
     Spinner spinner, spinner1,spinner2,spinner3,spinner4,spinner5,spinner6;
 
     @Override
@@ -22,14 +27,14 @@ public class Herramienta extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-
        spinner= findViewById(R.id.spinnerll);
        spinner1=findViewById(R.id.spinnermarti);
-       spinner2=findViewById(R.id.spinnerd);
+       /*spinner2=findViewById(R.id.spinnerd);
        spinner3=findViewById(R.id.spinnerp);
        spinner4=findViewById(R.id.spinnerme);
        spinner5=findViewById(R.id.spinneres);
-       spinner6=findViewById(R.id.spinnerta);
+       spinner6=findViewById(R.id.spinnerta);*/
+       guardar=findViewById(R.id.guardarhe);
 
 
        List list = new ArrayList();
@@ -50,13 +55,24 @@ public class Herramienta extends AppCompatActivity {
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner.setAdapter(arrayAdapter);
         spinner1.setAdapter(arrayAdapter);
-        spinner2.setAdapter(arrayAdapter);
+        /*spinner2.setAdapter(arrayAdapter);
         spinner3.setAdapter(arrayAdapter);
         spinner4.setAdapter(arrayAdapter);
         spinner5.setAdapter(arrayAdapter);
-        spinner6.setAdapter(arrayAdapter);
-
-
-
+        spinner6.setAdapter(arrayAdapter);*/
+        guardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Herramienta.this,Lista.class);
+                int llave = Integer.parseInt(spinner.getSelectedItem().toString());
+                int martillo = Integer.parseInt(spinner1.getSelectedItem().toString());
+                boolean sw = false;
+                intent.putExtra("llav",llave);
+                intent.putExtra("mart",martillo);
+                intent.putExtra("entro",sw);
+                Herramienta.this.startActivity(intent);
+            }
+        });
     }
 }
+
