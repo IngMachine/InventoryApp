@@ -1,9 +1,12 @@
 package com.example.fredy.inventoryapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -13,6 +16,7 @@ public class
 Epp extends AppCompatActivity {
 
     Spinner spiner, spiner1,spiner2,spiner3,spiner4,spiner5,spiner6;
+    Button sig2, ant2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +33,8 @@ Epp extends AppCompatActivity {
         spiner4=findViewById(R.id.spinnerar);
         spiner5=findViewById(R.id.spinnerma);
         spiner6=findViewById(R.id.spinnerta);
+        sig2 = findViewById(R.id.sig2);
+        ant2 = findViewById(R.id.ant2);
 
 
         List list = new ArrayList();
@@ -56,5 +62,25 @@ Epp extends AppCompatActivity {
         spiner6.setAdapter(arrayAdapter);
 
 
+
+        sig2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Epp.this,Herramienta.class);
+                int camisa = Integer.parseInt(spiner.getSelectedItem().toString());
+                intent.putExtra("camis", camisa);
+                Epp.this.startActivity(intent);
+            }
+        });
+
+        ant2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Epp.this,Dotacion.class);
+                int camisa = Integer.parseInt(spiner.getSelectedItem().toString());
+                intent.putExtra("camis", camisa);
+                Epp.this.startActivity(intent);
+            }
+        });
     }
-}
+    }

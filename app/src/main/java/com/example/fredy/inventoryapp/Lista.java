@@ -22,7 +22,7 @@ public class Lista extends AppCompatActivity {
     TextView tvDatos;
 
 
-    ImageButton herram, eppp,dota;
+    Button pedir;
     Button enviar;
     boolean swHerramienta;
 
@@ -31,33 +31,15 @@ public class Lista extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista);
 
-        herram= findViewById(R.id.herra);
-        herram.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent (Lista.this, Herramienta.class);
-                startActivity(intent);
-            }
-        });
-
-        eppp=findViewById(R.id.epp);
-        eppp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent (Lista.this, Epp.class);
-                startActivity(intent);
-            }
-        });
-
-        dota= findViewById(R.id.dotacion);
-        dota.setOnClickListener(new View.OnClickListener() {
+        pedir= findViewById(R.id.pedir);
+        pedir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent (Lista.this, Dotacion.class);
                 startActivity(intent);
             }
         });
-        Intent intent = getIntent();
+        /*Intent intent = getIntent();
 
         final int martillo = intent.getIntExtra("mart",0);
         final int llave = intent.getIntExtra("llav",0);
@@ -98,7 +80,7 @@ public class Lista extends AppCompatActivity {
                 RequestQueue queue = Volley.newRequestQueue(Lista.this);
                 queue.add(herramientaRequest);
             }
-        });
+        });*/
 
 
 

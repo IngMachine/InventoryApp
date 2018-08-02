@@ -1,5 +1,6 @@
 package com.example.fredy.inventoryapp;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Parcelable;
 import android.support.v7.app.ActionBar;
@@ -11,11 +12,16 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import com.android.volley.Response;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Dotacion extends AppCompatActivity {
-    Button guardar;
+    Button sig1;
 
     Spinner spinnner,spinnner1,spinnner2,spinnner3,spinnner4,spinnner5,spinnner6;
 
@@ -35,7 +41,8 @@ public class Dotacion extends AppCompatActivity {
         spinnner4=findViewById(R.id.spinnerglo);
         spinnner5=findViewById(R.id.spinnerehel);
         spinnner6=findViewById(R.id.spinnerpro);
-        guardar = findViewById(R.id.guardardo);
+
+
 
 
         List list = new ArrayList();
@@ -62,14 +69,38 @@ public class Dotacion extends AppCompatActivity {
         spinnner5.setAdapter(arrayAdapter);
         spinnner6.setAdapter(arrayAdapter);
 
-        guardar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Dotacion.this,Lista.class);
-                int camisa = Integer.parseInt(spinnner.getSelectedItem().toString());
-                intent.putExtra("camis", camisa);
-                Dotacion.this.startActivity(intent);
-            }
+        sig1 = findViewById(R.id.sig1);
+        sig1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = getIntent();
+                    final int camisa = intent.getIntExtra("cami",0);
+                    final int pantalon = intent.getIntExtra("pant",0);
+                    Response.Listener<String> responseListener = new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            try {
+                                JSONObject jsonObject = new JSONObject(response);
+                                boolean sucess = jsonObject.getBoolean("sucess");
+                                if(sucess){
+                                    Intent intent = new Intent(Dotacion.this,Epp.class);
+                                    Dotacion.this.startActivity(intent);
+                                }else{
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(Dotacion.this);
+                                    builder.setMessage("error registro")
+                                            .setNegativeButton("Retry",null)
+                                            .create().show();
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    };
+                    //Intent intent = new Intent(Dotacion.this,Epp.class);
+                    //int camisa = Integer.parseInt(spinnner.getSelectedItem().toString());
+                    //intent.putExtra("camis", camisa);
+                    //Dotacion.this.startActivity(intent);
+                }
         });
         }
 }

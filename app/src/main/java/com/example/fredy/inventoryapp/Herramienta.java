@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Herramienta extends AppCompatActivity {
-    Button guardar;
+    Button guardar, ant3;
     Spinner spinner, spinner1,spinner2,spinner3,spinner4,spinner5,spinner6;
 
     @Override
@@ -24,8 +24,8 @@ public class Herramienta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_herramienta);
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        /*ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);*/
 
        spinner= findViewById(R.id.spinnerll);
        spinner1=findViewById(R.id.spinnermarti);
@@ -34,12 +34,13 @@ public class Herramienta extends AppCompatActivity {
        spinner4=findViewById(R.id.spinnerme);
        spinner5=findViewById(R.id.spinneres);
        spinner6=findViewById(R.id.spinnerta);*/
-       guardar=findViewById(R.id.guardarhe);
+       guardar=findViewById(R.id.guardar);
+        ant3=findViewById(R.id.ant3);
 
 
-       List list = new ArrayList();
+        List list = new ArrayList();
 
-       list.add("0");
+        list.add("0");
         list.add("1");
         list.add("2");
         list.add("3");
@@ -73,6 +74,22 @@ public class Herramienta extends AppCompatActivity {
                 Herramienta.this.startActivity(intent);
             }
         });
+
+        ant3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Herramienta.this,Epp.class);
+                /*int llave = Integer.parseInt(spinner.getSelectedItem().toString());
+                int martillo = Integer.parseInt(spinner1.getSelectedItem().toString());
+                boolean sw = false;
+                intent.putExtra("llav",llave);
+                intent.putExtra("mart",martillo);
+                intent.putExtra("entro",sw);
+                Herramienta.this.startActivity(intent);*/
+            }
+        });
+
+
     }
 }
 

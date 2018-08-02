@@ -10,7 +10,8 @@
     <string name="edad">Edad</string>
     <string name="nombre_p">Nombre:</string>
     <string name="expresion">[ A-Za-zäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙ.-]+</string>
-    <string name="enviar">Enviar</string>
+    <string name="enviar">ENVIAR</string>
+    <string name="pedir">PEDIR</string>
     <string name="title_activity_view_final">view_final</string>
 
     <string name="title_activity_fullscreen">FullscreenActivity</string>

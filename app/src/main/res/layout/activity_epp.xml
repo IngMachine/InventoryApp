@@ -25,18 +25,18 @@
 
                 <ImageView
                     android:id="@+id/casco"
-                    android:layout_marginTop="15dp"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
                     android:src="@drawable/casco" />
 
 
                 <Spinner
                     android:id="@+id/spinnerc"
-                    android:layout_marginTop="40dp"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
+                    android:layout_marginTop="40dp"
                     android:layout_weight="1" />
 
             </LinearLayout>
@@ -57,9 +57,9 @@
                 <Spinner
                     android:id="@+id/spinnerg"
                     android:layout_width="50dp"
-                    android:layout_marginTop="20dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1" />
 
             </LinearLayout>
@@ -80,9 +80,9 @@
                 <Spinner
                     android:id="@+id/spinnera"
                     android:layout_width="50dp"
-                    android:layout_marginTop="20dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1" />
 
             </LinearLayout>
@@ -102,10 +102,10 @@
 
                 <Spinner
                     android:id="@+id/spinnerb"
-                    android:layout_marginTop="20dp"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1" />
 
             </LinearLayout>
@@ -126,9 +126,9 @@
                 <Spinner
                     android:id="@+id/spinnerar"
                     android:layout_width="50dp"
-                    android:layout_marginTop="20dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1" />
 
             </LinearLayout>
@@ -149,9 +149,9 @@
                 <Spinner
                     android:id="@+id/spinnerma"
                     android:layout_width="50dp"
-                    android:layout_marginTop="20dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1" />
 
             </LinearLayout>
@@ -172,26 +172,36 @@
                 <Spinner
                     android:id="@+id/spinnerta"
                     android:layout_width="50dp"
-                    android:layout_marginTop="20dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1" />
             </LinearLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginTop="20dp"
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/guardarepp"
-                    android:layout_gravity="center"
+                    android:id="@+id/sig2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="GUARDAR"/>
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="right"
+                    android:text="SIGUIENTE"
+                    android:layout_alignParentRight="true" />
 
-            </LinearLayout>
+                <Button
+                    android:id="@+id/ant2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="ANTERIOR" />
+
+            </RelativeLayout>
 
         </LinearLayout>
 
