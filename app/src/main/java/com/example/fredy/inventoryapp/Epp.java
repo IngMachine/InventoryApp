@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,7 @@ Epp extends AppCompatActivity {
 
     Spinner spiner, spiner1,spiner2,spiner3,spiner4,spiner5,spiner6;
     Button sig2, ant2;
+    TextView tvDatos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +26,13 @@ Epp extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+        Intent intent = getIntent();
+
+        final int camisa = intent.getIntExtra("cami",0);
+        final int pantalon = intent.getIntExtra("pant",0);
+        final int zapato = intent.getIntExtra("zap",0);
+        tvDatos = findViewById(R.id.tvprueba);
+        tvDatos.setText(String.format("%s%s%s",camisa,pantalon,zapato));
 
 
         spiner= findViewById(R.id.spinnerc);
@@ -67,8 +76,13 @@ Epp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Epp.this,Herramienta.class);
-                int camisa = Integer.parseInt(spiner.getSelectedItem().toString());
+                int casco = Integer.parseInt(spiner.getSelectedItem().toString());
+                int gafa = Integer.parseInt(spiner1.getSelectedItem().toString());
+                intent.putExtra("casc", casco);
+                intent.putExtra("gaf", gafa);
                 intent.putExtra("camis", camisa);
+                intent.putExtra("panta", pantalon);
+                intent.putExtra("zapa", zapato);
                 Epp.this.startActivity(intent);
             }
         });

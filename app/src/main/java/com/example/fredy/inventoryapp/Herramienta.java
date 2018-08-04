@@ -1,16 +1,24 @@
 package com.example.fredy.inventoryapp;
 
-import android.content.Context;
+
 import android.content.Intent;
-import android.content.SharedPreferences;
+
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.Toast;
+
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,10 +27,12 @@ public class Herramienta extends AppCompatActivity {
     Button guardar, ant3;
     Spinner spinner, spinner1,spinner2,spinner3,spinner4,spinner5,spinner6;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_herramienta);
+
 
         /*ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);*/
@@ -35,7 +45,7 @@ public class Herramienta extends AppCompatActivity {
        spinner5=findViewById(R.id.spinneres);
        spinner6=findViewById(R.id.spinnerta);*/
        guardar=findViewById(R.id.guardar);
-        ant3=findViewById(R.id.ant3);
+       ant3=findViewById(R.id.ant3);
 
 
         List list = new ArrayList();
@@ -64,14 +74,44 @@ public class Herramienta extends AppCompatActivity {
         guardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Herramienta.this,Lista.class);
-                int llave = Integer.parseInt(spinner.getSelectedItem().toString());
-                int martillo = Integer.parseInt(spinner1.getSelectedItem().toString());
-                boolean sw = false;
-                intent.putExtra("llav",llave);
-                intent.putExtra("mart",martillo);
-                intent.putExtra("entro",sw);
-                Herramienta.this.startActivity(intent);
+                Intent intent = getIntent();
+                final int llave = Integer.parseInt(spinner.getSelectedItem().toString());
+                final int martillo = Integer.parseInt(spinner1.getSelectedItem().toString());
+                final int casco = intent.getIntExtra("casc",0);
+                final int gafa = intent.getIntExtra("gaf",0);
+                final int camisa = intent.getIntExtra("camis",0);
+                final int pantalon = intent.getIntExtra("panta",0);
+                final int zapato = intent.getIntExtra("zapa",0);
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            boolean sucess = jsonObject.getBoolean("succes");
+                            System.out.println(jsonObject);
+                            if(sucess){
+                                Intent intent = new Intent(Herramienta.this,View_final.class);
+                                Herramienta.this.startActivity(intent);
+                            }
+                            else {
+                                AlertDialog.Builder builder = new AlertDialog.Builder(Herramienta.this);
+                                builder.setMessage("error registro")
+                                        .setNegativeButton("Retry",null)
+                                        .create().show();
+                            }
+                        }catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+                HerramientaRequest herramientaRequest = new HerramientaRequest(llave,martillo,responseListener);
+                DotacionRequest dotacionRequest = new DotacionRequest(camisa,pantalon,zapato,responseListener);
+                EppRequest eppRequest = new EppRequest(casco,gafa,responseListener);
+                RequestQueue queue = Volley.newRequestQueue(Herramienta.this);
+                queue.add(herramientaRequest);
+                queue.add(dotacionRequest);
+                queue.add(eppRequest);
+
             }
         });
 
@@ -79,13 +119,7 @@ public class Herramienta extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Herramienta.this,Epp.class);
-                /*int llave = Integer.parseInt(spinner.getSelectedItem().toString());
-                int martillo = Integer.parseInt(spinner1.getSelectedItem().toString());
-                boolean sw = false;
-                intent.putExtra("llav",llave);
-                intent.putExtra("mart",martillo);
-                intent.putExtra("entro",sw);
-                Herramienta.this.startActivity(intent);*/
+                Herramienta.this.startActivity(intent);
             }
         });
 

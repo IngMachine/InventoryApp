@@ -73,29 +73,14 @@ public class Dotacion extends AppCompatActivity {
         sig1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = getIntent();
-                    final int camisa = intent.getIntExtra("cami",0);
-                    final int pantalon = intent.getIntExtra("pant",0);
-                    Response.Listener<String> responseListener = new Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-                            try {
-                                JSONObject jsonObject = new JSONObject(response);
-                                boolean sucess = jsonObject.getBoolean("sucess");
-                                if(sucess){
-                                    Intent intent = new Intent(Dotacion.this,Epp.class);
-                                    Dotacion.this.startActivity(intent);
-                                }else{
-                                    AlertDialog.Builder builder = new AlertDialog.Builder(Dotacion.this);
-                                    builder.setMessage("error registro")
-                                            .setNegativeButton("Retry",null)
-                                            .create().show();
-                                }
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    };
+                    Intent intent = new Intent(Dotacion.this,Epp.class);
+                    int camisa = Integer.parseInt(spinnner.getSelectedItem().toString());
+                    int pantalon = Integer.parseInt(spinnner1.getSelectedItem().toString());
+                    int zapato = Integer.parseInt(spinnner2.getSelectedItem().toString());
+                    intent.putExtra("cami",camisa);
+                    intent.putExtra("pant",pantalon);
+                    intent.putExtra("zap",zapato);
+                    Dotacion.this.startActivity(intent);
                     //Intent intent = new Intent(Dotacion.this,Epp.class);
                     //int camisa = Integer.parseInt(spinnner.getSelectedItem().toString());
                     //intent.putExtra("camis", camisa);
