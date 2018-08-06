@@ -8,4 +8,35 @@
     tools:context=".View_final"
     android:orientation="vertical">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/exit"
+            android:layout_marginStart="66dp"
+            android:text="ENVIAR"
+            android:layout_marginLeft="66dp"
+            android:layout_alignParentLeft="true" />
+
+        <Button
+            android:id="@+id/exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="63dp"
+            android:layout_marginTop="195dp"
+            android:text="Salir"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="63dp" />
+
+    </RelativeLayout>
+
+
+
 </LinearLayout>
