@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -16,8 +17,8 @@ import java.util.List;
 public class
 Epp extends AppCompatActivity {
 
-    Spinner spiner, spiner1,spiner2,spiner3,spiner4,spiner5,spiner6;
-    Button sig2, ant2;
+    Spinner spiner, spiner1,spiner2,spiner3,spiner4,spiner5,spiner6,spiner7,spiner8;
+    ImageButton sig2, ant2;
     TextView tvDatos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ Epp extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("ELEMENTOS PROTECCIÓN PERSONAL");
         Intent intent = getIntent();
 
         final int camisa = intent.getIntExtra("cami",0);
@@ -36,12 +38,16 @@ Epp extends AppCompatActivity {
 
 
         spiner= findViewById(R.id.spinnerc);
-        spiner1=findViewById(R.id.spinnerg);
-        spiner2=findViewById(R.id.spinnera);
+        spiner1=findViewById(R.id.spinnergua);
+        spiner2=findViewById(R.id.spinnerg);
         spiner3=findViewById(R.id.spinnerb);
-        spiner4=findViewById(R.id.spinnerar);
-        spiner5=findViewById(R.id.spinnerma);
-        spiner6=findViewById(R.id.spinnerta);
+        spiner4=findViewById(R.id.spinnera);
+        spiner5=findViewById(R.id.spinnertapa);
+        spiner6=findViewById(R.id.spinnerar);
+        spiner7=findViewById(R.id.spinnerpants);
+        spiner8=findViewById(R.id.spinnerbar);
+
+
         sig2 = findViewById(R.id.sig2);
         ant2 = findViewById(R.id.ant2);
 
@@ -62,6 +68,7 @@ Epp extends AppCompatActivity {
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,list);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+
         spiner.setAdapter(arrayAdapter);
         spiner1.setAdapter(arrayAdapter);
         spiner2.setAdapter(arrayAdapter);
@@ -69,6 +76,9 @@ Epp extends AppCompatActivity {
         spiner4.setAdapter(arrayAdapter);
         spiner5.setAdapter(arrayAdapter);
         spiner6.setAdapter(arrayAdapter);
+        spiner7.setAdapter(arrayAdapter);
+        spiner8.setAdapter(arrayAdapter);
+
 
 
 

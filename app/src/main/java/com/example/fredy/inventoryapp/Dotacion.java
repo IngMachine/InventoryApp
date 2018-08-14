@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 
 import com.android.volley.Response;
@@ -21,9 +22,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Dotacion extends AppCompatActivity {
-    Button sig1;
+    ImageButton sig1;
 
-    Spinner spinnner,spinnner1,spinnner2,spinnner3,spinnner4,spinnner5,spinnner6;
+    Spinner spinnner,spinnner1,spinnner2,spinnner3,spinnner4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,17 +33,14 @@ public class Dotacion extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("DOTACIÓN");
 
 
         spinnner= findViewById(R.id.spinnerca);
         spinnner1=findViewById(R.id.spinnerpan);
-        spinnner2=findViewById(R.id.botasbo);
-        spinnner3=findViewById(R.id.spinnerimp);
-        spinnner4=findViewById(R.id.spinnerglo);
-        spinnner5=findViewById(R.id.spinnerehel);
-        spinnner6=findViewById(R.id.spinnerpro);
-
-
+        spinnner2=findViewById(R.id.cintu);
+        spinnner3=findViewById(R.id.chaleco1);
+        spinnner4=findViewById(R.id.spinnerimp);
 
 
         List list = new ArrayList();
@@ -66,8 +64,6 @@ public class Dotacion extends AppCompatActivity {
         spinnner2.setAdapter(arrayAdapter);
         spinnner3.setAdapter(arrayAdapter);
         spinnner4.setAdapter(arrayAdapter);
-        spinnner5.setAdapter(arrayAdapter);
-        spinnner6.setAdapter(arrayAdapter);
 
         sig1 = findViewById(R.id.sig1);
         sig1.setOnClickListener(new View.OnClickListener() {
@@ -81,11 +77,7 @@ public class Dotacion extends AppCompatActivity {
                     intent.putExtra("pant",pantalon);
                     intent.putExtra("zap",zapato);
                     Dotacion.this.startActivity(intent);
-                    //Intent intent = new Intent(Dotacion.this,Epp.class);
-                    //int camisa = Integer.parseInt(spinnner.getSelectedItem().toString());
-                    //intent.putExtra("camis", camisa);
-                    //Dotacion.this.startActivity(intent);
-                }
+                           }
         });
         }
 }

@@ -4,55 +4,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:background="#e0e855"
     android:layout_height="match_parent"
     tools:context=".Lista">
 
-    <ScrollView
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="50dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginLeft="30dp">
-
-            <ImageButton
-                android:id="@+id/herra"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="250dp"
-                android:layout_marginTop="50dp"
-                android:background="#e0e855"
-                android:src="@drawable/tools" />
+        <Button
+            android:id="@+id/pedir"
+            android:layout_width="198dp"
+            android:layout_height="111dp"
+            android:layout_centerInParent="true"
+            android:text="@string/pedir" />
 
 
-            <ImageButton
-                android:id="@+id/epp"
-                android:background="#e0e855"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_marginLeft="250dp"
-                android:src="@drawable/helmet"/>
-
-            <ImageButton
-                android:id="@+id/dotacion"
-                android:background="#e0e855"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="250dp"
-                android:layout_marginTop="50dp"
-                android:src="@drawable/overol"/>
-
-
-        </LinearLayout>
-
-
-
-    </ScrollView>
-
+    </RelativeLayout>
 
 
 </LinearLayout>

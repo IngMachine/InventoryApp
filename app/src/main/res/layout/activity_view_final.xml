@@ -6,34 +6,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".View_final"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#e0e855">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="186dp"
+            android:layout_marginRight="45dp"
+            android:text="CERRAR SESIÓN"
+            android:textColor="@color/colorPrimaryText" />
+
+        <TextView
+            android:id="@+id/enviar"
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/send"
+            android:layout_alignTop="@+id/textView2"
+            android:text="ENVIAR"
+            android:textColor="@color/colorPrimaryText" />
+
+        <ImageButton
             android:id="@+id/send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignTop="@+id/exit"
-            android:layout_marginStart="66dp"
-            android:text="ENVIAR"
             android:layout_marginLeft="66dp"
-            android:layout_alignParentLeft="true" />
+            android:layout_marginStart="66dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/send"
+            android:text="ENVIAR" />
 
-        <Button
+        <ImageButton
             android:id="@+id/exit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_marginEnd="63dp"
+            android:layout_marginRight="63dp"
             android:layout_marginTop="195dp"
-            android:text="Salir"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="63dp" />
+            android:background="@android:color/transparent"
+            android:src="@drawable/off"
+            android:text="Salir" />
 
     </RelativeLayout>
 

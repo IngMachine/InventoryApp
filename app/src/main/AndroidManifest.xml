@@ -35,6 +35,7 @@
             tools:targetApi="jelly_bean" />
         <activity
             android:name=".Dotacion"
+
             android:parentActivityName=".Lista"
             tools:targetApi="jelly_bean" />
         <activity android:name=".View_final"></activity>

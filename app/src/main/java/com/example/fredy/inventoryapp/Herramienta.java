@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 
 
@@ -24,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Herramienta extends AppCompatActivity {
-    Button guardar, ant3;
+    ImageButton guardar, ant3;
     Spinner spinner, spinner1,spinner2,spinner3,spinner4,spinner5,spinner6;
 
 
@@ -36,6 +37,7 @@ public class Herramienta extends AppCompatActivity {
 
         /*ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);*/
+        getSupportActionBar().setTitle("HERRAMIENTAS");
 
        spinner= findViewById(R.id.spinnerll);
        spinner1=findViewById(R.id.spinnermarti);
