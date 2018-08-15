@@ -17,7 +17,7 @@ import java.util.List;
 public class
 Epp extends AppCompatActivity {
 
-    Spinner spiner, spiner1,spiner2,spiner3,spiner4,spiner5,spiner6,spiner7,spiner8;
+    Spinner spiner, spiner1,spiner2,spiner3,spiner4,spiner5,spiner6,spiner7,spiner8,spiner9;
     ImageButton sig2, ant2;
     TextView tvDatos;
     @Override
@@ -46,6 +46,7 @@ Epp extends AppCompatActivity {
         spiner6=findViewById(R.id.spinnerar);
         spiner7=findViewById(R.id.spinnerpants);
         spiner8=findViewById(R.id.spinnerbar);
+        spiner9=findViewById(R.id.spinnertermo);
 
 
         sig2 = findViewById(R.id.sig2);
@@ -78,6 +79,7 @@ Epp extends AppCompatActivity {
         spiner6.setAdapter(arrayAdapter);
         spiner7.setAdapter(arrayAdapter);
         spiner8.setAdapter(arrayAdapter);
+        spiner9.setAdapter(arrayAdapter);
 
 
 

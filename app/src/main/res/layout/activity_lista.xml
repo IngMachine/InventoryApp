@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="#e0e855"
+    android:background="#B3E5FC"
     android:layout_height="match_parent"
     tools:context=".Lista">
 

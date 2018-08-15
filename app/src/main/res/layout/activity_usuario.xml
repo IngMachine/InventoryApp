@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e0e855"
+    android:background="#B3E5FC"
     android:orientation="vertical"
     tools:context=".Usuario">
     <TextView
@@ -118,7 +118,7 @@
         android:id="@+id/buttoningre"
         android:textColor="#000"
         android:layout_marginTop="50dp"
-        android:background="#e0e870"
+        android:background="@android:color/transparent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="INGRESAR" />

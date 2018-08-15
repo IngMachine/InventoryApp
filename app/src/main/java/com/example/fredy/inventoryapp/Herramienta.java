@@ -26,7 +26,8 @@ import java.util.List;
 
 public class Herramienta extends AppCompatActivity {
     ImageButton guardar, ant3;
-    Spinner spinner, spinner1,spinner2,spinner3,spinner4,spinner5,spinner6;
+    Spinner spinner, spinner1,spinner2,spinner3,spinner4,spinner5,spinner6,spinner7,spinner8,spinner9,spinner10,
+    spinner11,spinner12,spinner13,spinner14,spinner15,spinner16,spinner17,spinner18;
 
 
     @Override
@@ -39,13 +40,28 @@ public class Herramienta extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);*/
         getSupportActionBar().setTitle("HERRAMIENTAS");
 
-       spinner= findViewById(R.id.spinnerll);
-       spinner1=findViewById(R.id.spinnermarti);
-       /*spinner2=findViewById(R.id.spinnerd);
-       spinner3=findViewById(R.id.spinnerp);
-       spinner4=findViewById(R.id.spinnerme);
-       spinner5=findViewById(R.id.spinneres);
-       spinner6=findViewById(R.id.spinnerta);*/
+       spinner= findViewById(R.id.spinnermache);
+       spinner1=findViewById(R.id.spinnertije);
+       spinner2=findViewById(R.id.spinnerlima);
+       spinner3=findViewById(R.id.spinnerper);
+       spinner4=findViewById(R.id.spinnerexti);
+       spinner5=findViewById(R.id.spinnerboti);
+       spinner6=findViewById(R.id.spinnercono);
+       spinner7=findViewById(R.id.spinneresca);
+       spinner8=findViewById(R.id.spinnerali);
+       spinner9=findViewById(R.id.spinnermarti);
+       spinner10=findViewById(R.id.spinnermulti);
+       spinner11=findViewById(R.id.spinnerdest);
+       spinner12=findViewById(R.id.spinnercam);
+       spinner13=findViewById(R.id.spinnervalla);
+       spinner14=findViewById(R.id.spinnercinta);
+       spinner15=findViewById(R.id.spinnerkey);
+       spinner16=findViewById(R.id.spinnercuchi);
+       spinner17=findViewById(R.id.spinnercubo);
+       spinner18=findViewById(R.id.spinnerpin);
+
+
+
        guardar=findViewById(R.id.guardar);
        ant3=findViewById(R.id.ant3);
 
@@ -68,11 +84,24 @@ public class Herramienta extends AppCompatActivity {
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner.setAdapter(arrayAdapter);
         spinner1.setAdapter(arrayAdapter);
-        /*spinner2.setAdapter(arrayAdapter);
+        spinner2.setAdapter(arrayAdapter);
         spinner3.setAdapter(arrayAdapter);
         spinner4.setAdapter(arrayAdapter);
         spinner5.setAdapter(arrayAdapter);
-        spinner6.setAdapter(arrayAdapter);*/
+        spinner6.setAdapter(arrayAdapter);
+        spinner7.setAdapter(arrayAdapter);
+        spinner8.setAdapter(arrayAdapter);
+        spinner9.setAdapter(arrayAdapter);
+        spinner10.setAdapter(arrayAdapter);
+        spinner11.setAdapter(arrayAdapter);
+        spinner12.setAdapter(arrayAdapter);
+        spinner13.setAdapter(arrayAdapter);
+        spinner14.setAdapter(arrayAdapter);
+        spinner15.setAdapter(arrayAdapter);
+        spinner16.setAdapter(arrayAdapter);
+        spinner17.setAdapter(arrayAdapter);
+        spinner18.setAdapter(arrayAdapter);
+
         guardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

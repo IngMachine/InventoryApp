@@ -59,17 +59,35 @@ public class View_final extends AppCompatActivity {
                   "Tapabocas \t"+ "\n"+
                   "Equipo de Alturas \t"+ "\n"+
                   "Pantalon anti-corte \t"+ "\n"+
-                  "Barbiquejo \t"+ "\n"
+                  "Barbiquejo \t"+ "\n"+
+                  "Termos \t"+ "\n"
 
                   +"\n"+"\n"+"============================================="+"\n"
                   + "HERRAMIENTAS \n"+
+
                     "Machete \t"+ "\n"+
-                    "Tijera \t"+ "\n"+
+                    "Tijeras \t"+ "\n"+
                     "Lima\t"+ "\n"+
                     "Pertiga \t"+ "\n"+
                     "Extintor \t"+ "\n"+
                     "Botiquin \t"+ "\n"+
-                    "Conos \t"+ "\n");
+                    "Conos \t"+ "\n"+
+                    "Escaleras \t"+ "\n"+
+                    "Alicate \t"+ "\n"+
+                    "Martillo \t"+ "\n"+
+                    "Multimetro \t"+ "\n"+
+                     "Destornillador \t"+ "\n"+
+                     "Cámara \t"+ "\n"+
+                     "Vallas de Señalización \t"+ "\n"+
+                     "Cinta de Señalización \t"+ "\n"+
+                     "Juego de Llaves \t"+ "\n"+
+                     "Cuchillo \t"+ "\n"+
+                     "Cubo de Lona \t"+ "\n"+
+                     "Pinza \t"+ "\n"
+
+
+
+                );
             }
         });
 

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e0e855"
+    android:background="#B3E5FC"
     tools:context=".Herramienta">
 
 
@@ -52,11 +52,197 @@
 
 
                 <Spinner
-                    android:id="@+id/spinnerll"
+                    android:id="@+id/spinnermache"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_marginTop="40dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/tijeras"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/tijeras" />
+
+
+                <Spinner
+                    android:id="@+id/spinnertije"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/lima"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/lima" />
+
+
+                <Spinner
+                    android:id="@+id/spinnerlima"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/pertiga"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pertiga" />
+
+
+                <Spinner
+                    android:id="@+id/spinnerper"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/extintor"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/extintor" />
+
+
+                <Spinner
+                    android:id="@+id/spinnerexti"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/botiquin"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/botiquin" />
+
+
+                <Spinner
+                    android:id="@+id/spinnerboti"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/cono"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cono" />
+
+
+                <Spinner
+                    android:id="@+id/spinnercono"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/escalera"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/escalera" />
+
+
+                <Spinner
+                    android:id="@+id/spinneresca"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/alicates"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pliers" />
+
+
+                <Spinner
+                    android:id="@+id/spinnerali"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
                     android:layout_weight="1" />
 
             </LinearLayout>
@@ -83,6 +269,215 @@
                     android:layout_weight="1" />
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/multimetro"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/multimeter" />
+
+
+                <Spinner
+                    android:id="@+id/spinnermulti"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/destornillador"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/screwdriver" />
+
+
+                <Spinner
+                    android:id="@+id/spinnerdest"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/camara"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/camara" />
+
+
+                <Spinner
+                    android:id="@+id/spinnercam"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/valla"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/vallas" />
+
+
+                <Spinner
+                    android:id="@+id/spinnervalla"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/cinta"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cinta" />
+
+
+                <Spinner
+                    android:id="@+id/spinnercinta"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/llaves"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/keys" />
+
+
+                <Spinner
+                    android:id="@+id/spinnerkey"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/cuchillo"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cuchillo" />
+
+
+                <Spinner
+                    android:id="@+id/spinnercuchi"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/cubo"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cubo" />
+
+
+                <Spinner
+                    android:id="@+id/spinnercubo"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/pinza"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pinza" />
+
+
+                <Spinner
+                    android:id="@+id/spinnerpin"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
 
             <RelativeLayout
                 android:layout_width="match_parent"
